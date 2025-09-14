@@ -7,15 +7,26 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
-    
+
     <VerticalStackLayout Spacing="10" Padding="10">
+
+        <Label Text="Categoria:" />
+        <Entry x:Name="txt_categoria"
+               Placeholder="Ex: Alimentos, Limpeza, Bebidas..." />
+
         <Label Text="Descrição do Produto:" />
-        <Entry x:Name="txt_descricao" />
+        <Entry x:Name="txt_descricao"
+               Placeholder="Ex: Arroz 5kg" />
 
         <Label Text="Quantidade:" />
-        <Entry x:Name="txt_quantidade" Keyboard="Numeric" />
+        <Entry x:Name="txt_quantidade"
+               Keyboard="Numeric"
+               Placeholder="Ex: 2" />
 
         <Label Text="Preço Unitário:" />
-        <Entry x:Name="txt_preco" Keyboard="Numeric" />
+        <Entry x:Name="txt_preco"
+               Keyboard="Numeric"
+               Placeholder="Ex: 9.99" />
+
     </VerticalStackLayout>
 </ContentPage>

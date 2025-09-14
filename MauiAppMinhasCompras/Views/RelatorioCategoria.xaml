@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppMinhasCompras.Views.RelatorioCategoria"
+             Title="Relatório por Categoria">
+
+    <StackLayout Padding="10" Spacing="10">
+
+        <Frame Padding="0" Margin="10" VerticalOptions="FillAndExpand">
+            <ListView x:Name="lst_relatorio" 
+                      HasUnevenRows="True"
+                      SeparatorVisibility="Default">
+                <ListView.Header>
+                    <Grid ColumnDefinitions="200,100" BackgroundColor="{StaticResource Gray100}">
+                        <Label Grid.Column="0" Text="Categoria" FontAttributes="Bold" Padding="5"/>
+                        <Label Grid.Column="1" Text="Total Gasto" FontAttributes="Bold" Padding="5"/>
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="200,100">
+                                <Label Grid.Column="0" Text="{Binding Categoria}" Padding="5"/>
+                                <Label Grid.Column="1" Text="{Binding Total, StringFormat='{}{0:C}'}" Padding="5"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Frame>
+    </StackLayout>
+</ContentPage>
