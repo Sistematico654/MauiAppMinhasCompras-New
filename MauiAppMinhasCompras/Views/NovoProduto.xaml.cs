@@ -1,6 +1,4 @@
 using MauiAppMinhasCompras.Models;
-using Microsoft.Maui.Controls;
-using System;
 
 namespace MauiAppMinhasCompras.Views
 {

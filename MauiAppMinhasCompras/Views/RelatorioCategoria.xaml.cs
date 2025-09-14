@@ -1,4 +1,3 @@
-using MauiAppMinhasCompras.Models;
 using System.Collections.ObjectModel;
 
 namespace MauiAppMinhasCompras.Views;
