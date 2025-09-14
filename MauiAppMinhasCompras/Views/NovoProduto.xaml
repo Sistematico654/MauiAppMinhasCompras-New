@@ -4,7 +4,6 @@
              x:Class="MauiAppMinhasCompras.Views.NovoProduto"
              Title="Novo Produto">
 
-
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>

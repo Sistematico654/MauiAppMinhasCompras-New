@@ -9,7 +9,6 @@ public partial class ListaProduto : ContentPage
     public ListaProduto()
     {
         InitializeComponent();
-
         lst_produtos.ItemsSource = lista;
     }
 
@@ -19,9 +18,7 @@ public partial class ListaProduto : ContentPage
         try
         {
             lista.Clear();
-
             List<Produto> tmp = await App.Db.GetAll();
-
             tmp.ForEach(i => lista.Add(i));
         }
         catch (Exception ex)
@@ -36,11 +33,6 @@ public partial class ListaProduto : ContentPage
         {
             Navigation.PushAsync(new Views.NovoProduto());
         }
-        catch (Exception ex)
-        {
-            DisplayAlert("Ops", ex.Message, "OK");
-        }
-    }
 
     private async void txt_search_TextChanged(object sender, TextChangedEventArgs e)
     {
@@ -49,9 +41,7 @@ public partial class ListaProduto : ContentPage
             string q = e.NewTextValue;
 
             lista.Clear();
-
             List<Produto> tmp = await App.Db.Search(q);
-
             tmp.ForEach(i => lista.Add(i));
         }
         catch (Exception ex)
@@ -90,17 +80,9 @@ public partial class ListaProduto : ContentPage
 
                 if (confirm)
                 {
-                    // Remove do ObservableCollection
                     lista.Remove(p);
-
-                    // Remove do banco de dados
                     await App.Db.delete(p.Id);
                 }
-            }
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Ops", ex.Message, "OK");
         }
     }
 

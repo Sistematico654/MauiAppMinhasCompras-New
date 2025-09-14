@@ -5,7 +5,6 @@
              Title="Minhas Compras">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1"/>
         <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
     <VerticalStackLayout>
